@@ -1,0 +1,51 @@
+============================= test session starts =============================
+platform win32 -- Python 3.9.7, pytest-7.2.0, pluggy-1.0.0 -- C:\Users\Àðò¸ì\Documents\Python Projects\AAA\Pizza_Project\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Àðò¸ì\Documents\Python Projects\AAA\Pizza_Project
+plugins: cov-4.0.0
+collecting ... collected 38 items
+
+test_pizza.py::test_set_attributes_size_error PASSED
+test_pizza.py::test_set_attributes_properly PASSED
+test_pizza.py::test_dict_simple[pizza0-tomato sauce: 250,\nmozzarella: 500,\ntomatoes: 300] PASSED
+test_pizza.py::test_dict_simple[pizza1-tomato sauce: 400,\nmozzarella: 800,\ntomatoes: 500] PASSED
+test_pizza.py::test_dict_simple[pizza2-tomato sauce: 250,\nmozzarella: 400,\npepperoni: 700] PASSED
+test_pizza.py::test_dict_simple[pizza3-tomato sauce: 400,\nmozzarella: 600,\npepperoni: 1000] PASSED
+test_pizza.py::test_dict_simple[pizza4-tomato sauce: 250,\nmozzarella: 300,\nchicken: 400,\npineapples: 200] PASSED
+test_pizza.py::test_dict_simple[pizza5-tomato sauce: 400,\nmozzarella: 500,\nchicken: 700,\npineapples: 500] PASSED
+test_pizza.py::test_dict[pizza0-You need 250 grams of tomato sauce,\nYou need 500 grams of mozzarella,\nYou need 300 grams of tomatoes] PASSED
+test_pizza.py::test_dict[pizza1-You need 400 grams of tomato sauce,\nYou need 800 grams of mozzarella,\nYou need 500 grams of tomatoes] PASSED
+test_pizza.py::test_dict[pizza2-You need 250 grams of tomato sauce,\nYou need 400 grams of mozzarella,\nYou need 700 grams of pepperoni] PASSED
+test_pizza.py::test_dict[pizza3-You need 400 grams of tomato sauce,\nYou need 600 grams of mozzarella,\nYou need 1000 grams of pepperoni] PASSED
+test_pizza.py::test_dict[pizza4-You need 250 grams of tomato sauce,\nYou need 300 grams of mozzarella,\nYou need 400 grams of chicken,\nYou need 200 grams of pineapples] PASSED
+test_pizza.py::test_dict[pizza5-You need 400 grams of tomato sauce,\nYou need 500 grams of mozzarella,\nYou need 700 grams of chicken,\nYou need 500 grams of pineapples] PASSED
+test_pizza.py::test_icon_mixin_str[pizza0-- Margherita \U0001f9c0:\ntomato sauce: 250,\nmozzarella: 500,\ntomatoes: 300] PASSED
+test_pizza.py::test_icon_mixin_str[pizza1-- Margherita \U0001f9c0:\ntomato sauce: 400,\nmozzarella: 800,\ntomatoes: 500] PASSED
+test_pizza.py::test_icon_mixin_str[pizza2-- Pepperoni \U0001f355:\ntomato sauce: 250,\nmozzarella: 400,\npepperoni: 700] PASSED
+test_pizza.py::test_icon_mixin_str[pizza3-- Pepperoni \U0001f355:\ntomato sauce: 400,\nmozzarella: 600,\npepperoni: 1000] PASSED
+test_pizza.py::test_icon_mixin_str[pizza4-- Hawaiian \U0001f34d:\ntomato sauce: 250,\nmozzarella: 300,\nchicken: 400,\npineapples: 200] PASSED
+test_pizza.py::test_icon_mixin_str[pizza5-- Hawaiian \U0001f34d:\ntomato sauce: 400,\nmozzarella: 500,\nchicken: 700,\npineapples: 500] PASSED
+test_pizza.py::test_icon_mixin_repr[pizza0-- Margherita \U0001f9c0: tomato sauce, mozzarella, tomatoes. Available sizes: L, XL] PASSED
+test_pizza.py::test_icon_mixin_repr[pizza1-- Pepperoni \U0001f355: tomato sauce, mozzarella, pepperoni. Available sizes: L, XL] PASSED
+test_pizza.py::test_icon_mixin_repr[pizza2-- Hawaiian \U0001f34d: tomato sauce, mozzarella, chicken, pineapples. Available sizes: L, XL] PASSED
+test_pizza.py::test_equal PASSED
+test_pizza.py::test_not_equal PASSED
+test_pizza.py::test_equal_error PASSED
+test_pizza.py::test_name[pizza0-Margherita] PASSED
+test_pizza.py::test_name[pizza1-Pepperoni] PASSED
+test_pizza.py::test_name[pizza2-Hawaiian] PASSED
+test_pizza.py::test_cli_menu PASSED
+test_pizza.py::test_cli_menu_values[l-- Margherita \U0001f9c0:\ntomato sauce: 250,\nmozzarella: 500,\ntomatoes: 300\n\n- Pepperoni \U0001f355:\ntomato sauce: 250,\nmozzarella: 400,\npepperoni: 700\n\n- Hawaiian \U0001f34d:\ntomato sauce: 250,\nmozzarella: 300,\nchicken: 400,\npineapples: 200\n] PASSED
+test_pizza.py::test_cli_menu_values[xl-- Margherita \U0001f9c0:\ntomato sauce: 400,\nmozzarella: 800,\ntomatoes: 500\n\n- Pepperoni \U0001f355:\ntomato sauce: 400,\nmozzarella: 600,\npepperoni: 1000\n\n- Hawaiian \U0001f34d:\ntomato sauce: 400,\nmozzarella: 500,\nchicken: 700,\npineapples: 500\n] PASSED
+test_pizza.py::test_cli_order_error_argument PASSED
+test_pizza.py::test_cli_order_error_pizza PASSED
+test_pizza.py::test_cli_order[pepperoni-l-None-Order # (pizza Pepperoni) accepted. Wait...\nbake - min!\n\U0001f3e0 Please pick your order # within minutes!\n] PASSED
+test_pizza.py::test_cli_order[Margherita-xl-None-Order # (pizza Margherita) accepted. Wait...\nbake - min!\n\U0001f3e0 Please pick your order # within minutes!\n] PASSED
+test_pizza.py::test_cli_order[hawaiian-xl-Moscow-Order # (pizza Hawaiian) accepted. Wait...\nbake - min!\n\U0001f69a Deliver your order # to Moscow in minutes!\n] PASSED
+test_pizza.py::test_cli_order[pepperoni-xl-Russia Moscow Avito-Order # (pizza Pepperoni) accepted. Wait...\nbake - min!\n\U0001f69a Deliver your order # to Russia Moscow Avito in minutes!\n] PASSED
+
+----------- coverage: platform win32, python 3.9.7-final-0 -----------
+Coverage HTML written to dir htmlcov
+
+
+============================= 38 passed in 0.49s ==============================

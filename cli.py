@@ -64,7 +64,8 @@ def order(pizza: str, size: str, delivery: str):
     where pizza should be delivered
     """
 
-    assert pizza.lower() in PIZZAS, 'We have not this pizza, sorry'
+    if pizza.lower() not in PIZZAS:
+        raise ValueError('We have not this pizza, sorry')
 
     order_id = randint(0, 10**4)
     pizza_order = PIZZAS[pizza.lower()](size.upper())

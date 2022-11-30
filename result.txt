@@ -48,4 +48,4 @@ test_pizza.py::test_cli_order[pepperoni-xl-Russia Moscow Avito-Order # (pizza Pe
 Coverage HTML written to dir htmlcov
 
 
-============================= 38 passed in 0.49s ==============================
+============================= 38 passed in 3.19s ==============================

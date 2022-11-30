@@ -51,16 +51,16 @@ class Pizza(IconPizzaMixin, ABC):
 
     AVAILABLE_SIZES = ['L', 'XL']
 
-    def _setattributes(self, size: str):
+    def _setattributes(self, size: str = 'L'):
         """
         Creates a pizza instance, checks the entered size against available
         sizes and creates instance attributes corresponding
         to the pizza ingredients and their values
         :param size: string, size of the pizza typed by the user
         """
-        message_sizes = ", ".join(self.AVAILABLE_SIZES)
-        assert size in self.AVAILABLE_SIZES, (f'No such size! Available '
-                                              f'sizes: {message_sizes}.')
+        msg_sizes = ", ".join(self.AVAILABLE_SIZES)
+        if size not in self.AVAILABLE_SIZES:
+            raise ValueError(f'No such size! Available sizes: {msg_sizes}.')
         setattr(self, '_size', size)
         for ingredient in self.ingredients:
             value = getattr(type(self), ingredient)[self._size]

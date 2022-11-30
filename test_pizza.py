@@ -8,7 +8,7 @@ def test_set_attributes_size_error():
     """
     Testing the setting attributes of the pizza with wrong size
     """
-    with pytest.raises(AssertionError) as e:
+    with pytest.raises(ValueError) as e:
         Margherita(size='ml')
     assert 'No such size! Available sizes: L, XL' in str(e)
 
@@ -247,7 +247,7 @@ def test_cli_order_error_pizza():
     runner = CliRunner()
     result = runner.invoke(order, ['Meatballs', '--size', 'ml'])
     assert result.exit_code == 1
-    assert "AssertionError('We have not this pizza, sorry')" in str(result)
+    assert "ValueError('We have not this pizza, sorry')" in str(result)
 
 
 @pytest.mark.parametrize(
